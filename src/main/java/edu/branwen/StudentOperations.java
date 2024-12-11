@@ -182,7 +182,7 @@ public class StudentOperations {
      * @param semester Current Students Semester
      */
     public static void AddStudent(String id, String name, String department, String email, String phone, String gender, int semester) {
-        if (CheckIdExists(id) == true) {
+        if (CheckIdExists(id)) {
             System.out.println("ID already exists!...\n\n");
             return;
         }
@@ -225,7 +225,7 @@ public class StudentOperations {
 
     /**
      * Before inserting new student, check if their ID already exists in the database table.
-     * @param id Students Id
+     * @param id Students ID
      * @return true if the id already exists in the table.
      */
     private static boolean CheckIdExists(String id) {
