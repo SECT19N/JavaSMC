@@ -53,35 +53,43 @@ public class Main {
 
                     System.out.println();
                 } else if (InputOption == 3) {
-                    String id, name, department, email, phone, gender;
-                    int semester = 0;
-                    double s1 = 0, s2 = 0, s3 = 0, s4 = 0, s5 = 0;
 
                     System.out.print("Student ID: ");
-                    id = sc.next();
+                    String id = sc.next();
                     sc.nextLine(); //Because of error.
+
                     System.out.print("Student Name: ");
-                    name = sc.nextLine();
+                    String name = sc.nextLine();
+
                     System.out.print("Department: ");
-                    department = sc.next();
+                    String department = sc.next();
+
                     System.out.print("Gender: ");
-                    gender = sc.next();
+                    String gender = sc.next();
+
                     System.out.print("Phone: ");
-                    phone = sc.next();
+                    String phone = sc.next();
+
                     System.out.print("Email: ");
-                    email = sc.next();
+                    String email = sc.next();
+
                     System.out.print("Semester: ");
-                    semester = sc.nextInt();
+                    int semester = sc.nextInt();
+
                     System.out.print("Subject 1: ");
-                    s1 = sc.nextDouble();
+                    double s1 = sc.nextDouble();
+
                     System.out.print("Subject 2: ");
-                    s2 = sc.nextDouble();
+                    double s2 = sc.nextDouble();
+
                     System.out.print("Subject 3: ");
-                    s3 = sc.nextDouble();
+                    double s3 = sc.nextDouble();
+
                     System.out.print("Subject 4: ");
-                    s4 = sc.nextDouble();
+                    double s4 = sc.nextDouble();
+
                     System.out.print("Subject 5: ");
-                    s5 = sc.nextDouble();
+                    double s5 = sc.nextDouble();
 
                     StudentOperations.AddStudent(id, name, department, email, phone, gender, semester);
                     StudentOperations.InsertScores(id, semester, s1, s2, s3, s4, s5);
